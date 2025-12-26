@@ -36,10 +36,12 @@ jobs:
       - name: Build
         run: ./gradlew build
 
-      - name: Remove shadow JARs
+      - name: Remove shadow and sources JARs
         run: |
           rm fabric/build/libs/*-dev-shadow.jar
+          rm fabric/build/libs/*-sources.jar
           rm neoforge/build/libs/*-dev-shadow.jar
+          rm neoforge/build/libs/*-sources.jar
 
       - uses: actions/upload-artifact@v4
         name: Upload Fabric Build
