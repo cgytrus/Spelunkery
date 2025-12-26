@@ -62,4 +62,5 @@ shadowJar {
 remapJar {
     inputFile.set shadowJar.archiveFile
     atAccessWideners.add("spelunkery.accesswidener")
+    archiveClassifier = "neoforge"
 }
